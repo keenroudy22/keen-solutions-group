@@ -4,10 +4,8 @@ import ReviewRequest from './review-request';
 const services = ['Business internet', 'Business phone systems', 'New locations and office moves', 'Backup and service reviews'];
 const steps = ['Tell us what is changing.', 'We review the available options with you.', 'We help coordinate the service you choose.'];
 const providerLogos = [
-  { file: 'att.png', name: 'AT&T' },
   { file: 'comcast-business.png', name: 'Comcast Business' },
   { file: 'spectrum.png', name: 'Spectrum' },
-  { file: 'ringcentral.png', name: 'RingCentral' },
   { file: '8x8.png', name: '8x8' },
   { file: 'dialpad.png', name: 'Dialpad' },
 ];
