@@ -22,7 +22,6 @@ export default function Home() {
           <span>Keen Solutions Group</span>
         </a>
         <div className="header-actions">
-          <a href="tel:+17654387612">(765) 438-7612</a>
           <a className="header-review" href="#contact">Free service review</a>
         </div>
       </header>
@@ -34,7 +33,6 @@ export default function Home() {
           <p className="hero-lede">KSG helps you compare options, choose the right fit, and coordinate installation.</p>
           <div className="hero-actions">
             <a className="primary-button" href="#contact">Request a free service review</a>
-            <a className="phone-link" href="tel:+17654387612">Or call (765) 438-7612</a>
           </div>
         </div>
       </section>
@@ -76,7 +74,6 @@ export default function Home() {
           </div>
           <div className="contact-actions">
             <a className="contact-email" href="mailto:info@keensolutionsgroup.com?subject=Free%20Business%20Connectivity%20Review">info@keensolutionsgroup.com</a>
-            <a className="contact-phone" href="tel:+17654387612">(765) 438-7612</a>
           </div>
           <Image className="contact-logo" src="/ksg-logo-transparent.png" alt="Keen Solutions Group" width={270} height={270} />
         </div>
@@ -85,7 +82,6 @@ export default function Home() {
       <footer>
         <div className="footer-brand"><Image src="/ksg-mark-transparent.png" alt="" width={32} height={32} /><span>Keen Solutions Group</span></div>
         <a href="mailto:info@keensolutionsgroup.com">info@keensolutionsgroup.com</a>
-        <a href="tel:+17654387612">(765) 438-7612</a>
         <p>© {new Date().getFullYear()} Keen Solutions Group</p>
       </footer>
     </main>
