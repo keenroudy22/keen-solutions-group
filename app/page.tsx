@@ -1,9 +1,8 @@
 import Image from 'next/image';
+import ReviewRequest from './review-request';
 
 const services = ['Business internet', 'Business phone systems', 'New locations and office moves', 'Backup and service reviews'];
 const steps = ['Tell us what is changing.', 'We review the available options with you.', 'We help coordinate the service you choose.'];
-const reviewLink = 'mailto:info@keensolutionsgroup.com?subject=Free%20Business%20Connectivity%20Review';
-
 export default function Home() {
   return (
     <main id="top">
@@ -12,7 +11,7 @@ export default function Home() {
           <Image className="brand-mark" src="/ksg-mark-transparent.png" alt="KSG" width={48} height={48} priority />
           <span>Keen Solutions Group</span>
         </a>
-        <a className="header-button" href={reviewLink}>Request a review</a>
+        <ReviewRequest />
       </header>
 
       <section className="hero">
@@ -20,7 +19,7 @@ export default function Home() {
           <p className="eyebrow">Central Indiana business connectivity</p>
           <h1>Business internet and phone service, made simple.</h1>
           <p>KSG helps businesses compare options, choose the right fit, and coordinate installation.</p>
-          <a className="primary-button" href={reviewLink}>Request a free service review</a>
+          <ReviewRequest />
         </div>
       </section>
 
@@ -38,7 +37,7 @@ export default function Home() {
       <section className="review-callout">
         <div className="content">
           <p>Planning a change or want a second look at what you have?</p>
-          <a className="primary-button" href={reviewLink}>Request a free service review</a>
+          <ReviewRequest />
         </div>
       </section>
 
