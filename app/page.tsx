@@ -1,9 +1,16 @@
 import Image from 'next/image';
 
-const situations = [
-  { number: '01', title: 'You are opening or moving', description: 'Get internet and phones lined up before the new space becomes a last-minute problem.' },
-  { number: '02', title: 'Your current service is not working', description: 'See what else is available at your address and whether a better fit exists.' },
-  { number: '03', title: 'Your phones need to catch up', description: 'Set up a system that works for the front desk, the field, remote staff, or all three.' },
+const services = [
+  'Business internet',
+  'Business phone systems',
+  'New locations and office moves',
+  'Backup and better-fit service reviews',
+];
+
+const steps = [
+  ['Tell us what is changing.', 'Opening a location, moving an office, replacing phones, or reviewing the service you already have.'],
+  ['We check the available options.', 'KSG compares the options and explains the practical tradeoffs in plain language.'],
+  ['We help coordinate the next step.', 'Once you choose a fit, KSG helps keep the order, installation, and activation moving.'],
 ];
 
 export default function Home() {
@@ -11,70 +18,74 @@ export default function Home() {
     <main id="top">
       <header className="site-header">
         <a className="brand" href="#top" aria-label="Keen Solutions Group home">
-          <Image src="/ksg-logo.png" alt="KSG" width={46} height={46} priority />
+          <Image className="brand-mark" src="/ksg-mark-transparent.png" alt="KSG" width={48} height={48} priority />
           <span>Keen Solutions Group</span>
         </a>
-        <a className="header-contact" href="#review">Free review</a>
+        <div className="header-actions">
+          <a href="tel:+17654387612">(765) 438-7612</a>
+          <a className="header-review" href="#contact">Free service review</a>
+        </div>
       </header>
 
       <section className="hero">
         <div className="hero-inner">
           <p className="eyebrow">Central Indiana business connectivity</p>
-          <h1>Internet and phones, without the headache.</h1>
-          <p className="hero-lede">We help businesses understand their options, choose the right service, and get it installed. One local contact from first question to go-live.</p>
+          <h1>Business internet and phone service, made simple.</h1>
+          <p className="hero-lede">KSG helps you compare options, choose the right fit, and coordinate installation.</p>
           <div className="hero-actions">
-            <a className="primary-button" href="#review">Get a free service review</a>
-            <a className="text-link" href="#how-it-works">How it works <span aria-hidden="true">↓</span></a>
-          </div>
-        </div>
-        <div className="hero-rule" />
-        <div className="hero-note"><span>For businesses</span><span>Internet · Phone · New locations</span></div>
-      </section>
-
-      <section className="plain-intro section">
-        <p className="eyebrow">What KSG does</p>
-        <div className="intro-grid">
-          <h2>You tell us what you need. We handle the confusing part.</h2>
-          <p>Providers, pricing, contracts, installation dates, number transfers—there is a lot to sort out. KSG brings the options together, explains them plainly, and helps keep the project on track.</p>
-        </div>
-      </section>
-
-      <section className="situations" aria-labelledby="situations-title">
-        <div className="section">
-          <p className="eyebrow">When to call</p>
-          <h2 id="situations-title">We are useful when…</h2>
-          <div className="situation-list">
-            {situations.map((situation) => (
-              <article key={situation.number}>
-                <span className="situation-number">{situation.number}</span>
-                <div><h3>{situation.title}</h3><p>{situation.description}</p></div>
-              </article>
-            ))}
+            <a className="primary-button" href="#contact">Request a free service review</a>
+            <a className="phone-link" href="tel:+17654387612">Or call (765) 438-7612</a>
           </div>
         </div>
       </section>
 
-      <section className="process section" id="how-it-works">
-        <div className="process-heading"><p className="eyebrow">How it works</p><h2>A simple place to start.</h2></div>
+      <section className="services section" aria-labelledby="services-title">
+        <p className="eyebrow">What we do</p>
+        <h2 id="services-title">Straightforward help for business connectivity.</h2>
+        <ul>
+          {services.map((service) => <li key={service}>{service}</li>)}
+        </ul>
+      </section>
+
+      <section className="process section" aria-labelledby="process-title">
+        <div>
+          <p className="eyebrow">How KSG helps</p>
+          <h2 id="process-title">A simple place to start.</h2>
+        </div>
         <ol>
-          <li><strong>Tell us about the business.</strong><span>Where you are, what is changing, and what has not been working.</span></li>
-          <li><strong>We look at the options.</strong><span>We compare what is available and walk you through the real tradeoffs.</span></li>
-          <li><strong>You choose with confidence.</strong><span>Then we help coordinate the order, install, and activation.</span></li>
+          {steps.map(([title, description], index) => (
+            <li key={title}>
+              <span>{String(index + 1).padStart(2, '0')}</span>
+              <div><strong>{title}</strong><p>{description}</p></div>
+            </li>
+          ))}
         </ol>
       </section>
 
-      <section className="review" id="review">
-        <div className="section review-inner">
-          <div><p className="eyebrow eyebrow-light">Start with a conversation</p><h2>Not sure if your service is the right fit?</h2><p className="review-copy">Ask for a no-cost review. We will look at what you have, what is available, and where there may be a better option.</p></div>
-          <Image className="review-logo" src="/ksg-logo-full.png" alt="Keen Solutions Group" width={400} height={400} />
-          <a className="review-button" href="mailto:info@keensolutionsgroup.com?subject=Free%20Business%20Connectivity%20Review">Request a free review</a>
+      <section className="network section">
+        <p className="eyebrow">Independent advice, broader support</p>
+        <p>KSG is an independent technology advisor backed by a nationwide supplier and engineering network.</p>
+      </section>
+
+      <section className="contact" id="contact">
+        <div className="section contact-inner">
+          <div>
+            <p className="eyebrow eyebrow-light">Get in touch</p>
+            <h2>Need to talk through your internet or phone service?</h2>
+            <p>Reach out for a no-cost service review. We will start with what is changing and what you need the service to do.</p>
+          </div>
+          <div className="contact-actions">
+            <a className="contact-email" href="mailto:info@keensolutionsgroup.com?subject=Free%20Business%20Connectivity%20Review">info@keensolutionsgroup.com</a>
+            <a className="contact-phone" href="tel:+17654387612">(765) 438-7612</a>
+          </div>
+          <Image className="contact-logo" src="/ksg-logo-transparent.png" alt="Keen Solutions Group" width={270} height={270} />
         </div>
       </section>
 
       <footer>
-        <div className="footer-brand"><Image src="/ksg-logo.png" alt="" width={34} height={34} /><span>Keen Solutions Group</span></div>
+        <div className="footer-brand"><Image src="/ksg-mark-transparent.png" alt="" width={32} height={32} /><span>Keen Solutions Group</span></div>
         <a href="mailto:info@keensolutionsgroup.com">info@keensolutionsgroup.com</a>
-        <p>Noblesville, Indiana · Serving Central Indiana businesses</p>
+        <a href="tel:+17654387612">(765) 438-7612</a>
         <p>© {new Date().getFullYear()} Keen Solutions Group</p>
       </footer>
     </main>
