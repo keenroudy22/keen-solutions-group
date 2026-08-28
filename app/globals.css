@@ -38,13 +38,14 @@ footer { width:min(1180px,calc(100% - 48px)); min-height:84px; margin:0 auto; di
 footer a { color:var(--blue); font-weight:700; }
 footer p { margin:0; }
 .review-dialog-backdrop { position:fixed; z-index:10; inset:0; display:grid; place-items:center; padding:24px; background:rgba(8,17,28,.76); }
-.review-dialog { position:relative; width:min(680px,100%); max-height:min(820px,calc(100vh - 48px)); overflow:auto; padding:42px; color:var(--ink); background:var(--white); box-shadow:0 24px 90px rgba(0,0,0,.36); }
+.review-dialog { position:relative; width:min(680px,100%); max-height:min(820px,calc(100vh - 48px)); overflow:auto; padding:42px; color:#142334; background:var(--white); box-shadow:0 24px 90px rgba(0,0,0,.36); }
 .review-dialog h2 { margin-top:9px; font-size:clamp(31px,5vw,46px); }
-.dialog-intro { max-width:520px; margin:15px 0 28px; color:var(--muted); line-height:1.5; }
-.dialog-close { position:absolute; top:15px; right:18px; border:0; color:var(--muted); background:transparent; font-size:31px; line-height:1; cursor:pointer; }
+.dialog-intro { max-width:520px; margin:15px 0 28px; color:#40566b; font-weight:560; line-height:1.5; }
+.dialog-close { position:absolute; top:15px; right:18px; border:0; color:#334d63; background:transparent; font-size:31px; line-height:1; cursor:pointer; }
 .form-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
-.form-grid label { display:grid; gap:7px; color:#40505e; font-size:13px; font-weight:720; }
-.form-grid input,.form-grid textarea,.form-grid select { width:100%; border:1px solid #cbd7df; border-radius:0; padding:11px 12px; color:var(--ink); background:#fbfdff; font:inherit; font-size:14px; font-weight:450; outline-color:var(--blue); resize:vertical; }
+.form-grid label { display:grid; gap:7px; color:#1d3448; font-size:13px; font-weight:780; }
+.form-grid input,.form-grid textarea,.form-grid select { width:100%; border:1px solid #8da7b9; border-radius:0; padding:11px 12px; color:#142334; background:#fff; font:inherit; font-size:14px; font-weight:500; outline-color:var(--blue); resize:vertical; }
+.form-grid input::placeholder,.form-grid textarea::placeholder { color:#4a6478; opacity:1; }
 .form-grid .full-width { grid-column:1 / -1; }
 .form-submit { margin-top:22px; padding:14px 18px; border:0; color:var(--white); background:var(--blue-dark); font:inherit; font-size:15px; font-weight:750; cursor:pointer; }
 @media (max-width:900px) { .provider-logos { grid-template-columns:repeat(3,1fr); } }
