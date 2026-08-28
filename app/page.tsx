@@ -52,7 +52,8 @@ export default function Home() {
         </div>
       </section>
 
-      <footer>
+      <footer id="contact-done">
+        <p className="submission-notice">Thanks — KSG received your request and will be in touch.</p>
         <div className="footer-brand"><Image src="/ksg-mark-transparent.png" alt="" width={30} height={30} /><span>Keen Solutions Group</span></div>
         <p>© {new Date().getFullYear()} Keen Solutions Group</p>
       </footer>
